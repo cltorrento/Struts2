@@ -24,7 +24,6 @@ th {height: 30px;}
 			<table>
 				<thead>
 					<tr style="background-color: #E0E0E1;">
-						<th>Id</th>
 						<th>First Name</th>
 						<th>SurName</th>
 						<th>User Name</th>
@@ -35,7 +34,6 @@ th {height: 30px;}
 				</thead>
 				<s:iterator value="beanList">
 					<tr>
-						<td><s:property value="id" /></td>
 						<td><s:property value="name" /></td>
 						<td><s:property value="surname" /></td>
 						<td><s:property value="username" /></td>

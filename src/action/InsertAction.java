@@ -8,7 +8,6 @@ public class InsertAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
 	
-	private int id;
 	private String firstname;
 	private String surname;
 	private String username;
@@ -19,33 +18,21 @@ public class InsertAction extends ActionSupport {
 	User user = null;
 	int ctr = 0;
 	
-	@Override
-	public String execute() throws Exception {
+	public String newUser(){
 		user = new User();
-
-		try {
-			ctr = user.registerUser(firstname, surname, username, email, passwd);
+			try {
+				ctr = user.registerUser(firstname, surname, username, email, passwd);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			if (ctr > 0) {
 				msg = "Registration Successfull";
 			} else {
 				msg = "Can`t Save User Info...";
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		return "REGISTER";
 	}
-
-	
-	public int getId() {
-		return id;
-	}
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
 
 	public String getFirstname() {
 		return firstname;

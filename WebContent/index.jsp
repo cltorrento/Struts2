@@ -10,8 +10,8 @@
 <body>
 	<s:form action="saludoDelForm">
 		<h1>Struts 2 (CRUD) using JDBC</h1>
-		<a href="insert.jsp">Add New User</a>
-		
+		<a href="insert.jsp">Add New User</a></br>
+		<a href="userslist.jsp">User List</a>
 	</s:form>
 </body>
 </html>

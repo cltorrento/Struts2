@@ -4,13 +4,17 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 import bean.UserBean;
 import dao.User;
 
 public class ListAction extends ActionSupport{
-
+	
+	final static Logger logger = Logger.getLogger(ListAction.class);
+	
 	private static final long serialVersionUID = 1L;
 	
 	ResultSet rs = null;
@@ -21,6 +25,7 @@ public class ListAction extends ActionSupport{
 
 	@Override
 	public String execute() throws Exception {
+		logger.debug("Accesing a execute() Method of ListAction.java File...");
 		try {
 			beanList = new ArrayList<UserBean>();
 			rs = user.report();

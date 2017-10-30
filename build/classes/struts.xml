@@ -6,8 +6,8 @@
 
 <struts>
 	<package name="default" extends="struts-default">
-		<action name="registeruser" class="action.InsertAction">
-			<result name="REGISTER">/index.jsp</result>
+		<action name="registeruser" class="action.InsertAction" method="newUser">
+			<result name="REGISTER">/insert.jsp</result>
 		</action>
 	</package>
 </struts>

@@ -13,7 +13,7 @@ public class User {
 	// method for create connection
 		public static Connection getConnection() throws Exception {
 			try {
-				logger.debug("Conecting to the database");
+				logger.debug("Successfully Conected to the database");
 				Class.forName("com.mysql.jdbc.Driver");
 				return DriverManager.getConnection("jdbc:mysql://localhost:3306/db02", "tuxito", "toor");
 			} catch (Exception e) {
@@ -50,7 +50,7 @@ public class User {
 		public ResultSet report() throws SQLException, Exception {
 			ResultSet rs = null;
 			try {
-				String query = "SELECT id, firstname, surname, username, email, passwd FROM users";
+				String query = "SELECT firstname, surname, username, email, passwd FROM users";
 				PreparedStatement ps = getConnection().prepareStatement(query);
 				rs = ps.executeQuery();
 				return rs;
