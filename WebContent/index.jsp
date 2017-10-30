@@ -9,7 +9,9 @@
 </head>
 <body>
 	<s:form action="saludoDelForm">
-		<h1>Probando Struts2 ver. 2.5.10</h1>
+		<h1>Struts 2 (CRUD) using JDBC</h1>
+		<a href="insert.jsp">Add New User</a>
+		
 	</s:form>
 </body>
 </html>

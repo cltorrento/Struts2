@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org//dtds/struts-2.5.dtd">
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" 
+"http://struts.apache.org//dtds/struts-2.5.dtd">
 <!-- This file must done the parts of a Controller from MVC -->
 
 <struts>
-	<package name="user" extends="struts-default">
-		<action name="saludoDelForm" class="action.SaludoAction" method="saludoDelForm">
-			<result name="xl">/index.jsp</result>
+	<package name="default" extends="struts-default">
+		<action name="registeruser" class="action.InsertAction">
+			<result name="REGISTER">/index.jsp</result>
 		</action>
-	
 	</package>
 </struts>
